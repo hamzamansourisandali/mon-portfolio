@@ -219,6 +219,25 @@
             .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
             .nav-links { display: none; } 
         }
+        /* --- STYLE POUR LA VEILLE --- */
+        .tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-blue);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        .source-card {
+            transition: all 0.3s ease;
+            border: 1px solid var(--glass-border);
+            height: 100%;
+        }
+        .source-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-cyan);
+            background: rgba(255, 255, 255, 0.06);
+        }
     </style>
 </head>
 <body>
@@ -234,6 +253,7 @@
         <li><a href="#parcours">Parcours</a></li>
         <li><a href="#skills">Expertise</a></li>
         <li><a href="#projets">Projets</a></li>
+        <li><a href="#veille">Veille</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
@@ -439,109 +459,111 @@
     </div>
 
     <div class="project-grid">
-        <div class="project-card reveal">
-            <div class="project-img-wrapper">
-                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=600');"></div>
-            </div>
-            <div class="project-body">
-                <div>
-                    <h3 class="project-title">01 — Segmentation & Routage VLAN</h3>
-                    <div class="project-meta">
-                        <div class="meta-item"><span class="meta-label">Problématique</span><span class="meta-text">Isoler les flux entre différents services (ex: Administration vs Invités).</span></div>
-                        <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Création de VLANs sur switch manageable et configuration du routage.</span></div>
-                        <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Tests de connectivité et isolation des accès non autorisés.</span></div>
-                    </div>
-                </div>
-                <a href="LIEN_PDF_TP1" target="_blank" class="btn btn-outline" style="width:100%;">Dossier Technique (PDF)</a>
-            </div>
+    <div class="project-card reveal">
+        <div class="project-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc48?q=80&w=2000&auto=format&fit=crop" alt="Virtualisation" class="project-img">
         </div>
-
-        <div class="project-card reveal">
-            <div class="project-img-wrapper">
-                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=600');"></div>
-            </div>
-            <div class="project-body">
-                <div>
-                    <h3 class="project-title">02 — Active Directory & GPO</h3>
-                    <div class="project-meta">
-                        <div class="meta-item"><span class="meta-label">Problématique</span><span class="meta-text">Gérer de manière robuste et évolutive les comptes utilisateurs.</span></div>
-                        <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Installation du rôle AD DS et déploiement de stratégies de groupe.</span></div>
-                        <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Application conforme des politiques sur machines clientes.</span></div>
-                    </div>
+        <div class="project-body">
+            <div>
+                <h3 class="project-title">01 — Création d'une VM Windows</h3>
+                <div class="project-meta">
+                    <div class="meta-item"><span class="meta-label">Missions</span><span class="meta-text">Installer et configurer un environnement virtuel Windows.</span></div>
+                    <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Allocation des ressources (RAM, CPU), partitionnement et installation de l'OS.</span></div>
+                    <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Optimisation des performances et installation des outils invités.</span></div>
                 </div>
-                <a href="LIEN_PDF_TP2" target="_blank" class="btn btn-outline" style="width:100%;">Dossier Technique (PDF)</a>
             </div>
-        </div>
-
-        <div class="project-card reveal">
-            <div class="project-img-wrapper">
-                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=600');"></div>
-            </div>
-            <div class="project-body">
-                <div>
-                    <h3 class="project-title">03 — Services DHCP & DNS</h3>
-                    <div class="project-meta">
-                        <div class="meta-item"><span class="meta-label">Problématique</span><span class="meta-text">Automatiser l'attribution IP et la résolution de noms interne.</span></div>
-                        <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Configuration des rôles DHCP (réservations) et DNS (zones).</span></div>
-                        <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Analyse des baux et résolution par nslookup réussies.</span></div>
-                    </div>
-                </div>
-                <a href="LIEN_PDF_TP3" target="_blank" class="btn btn-outline" style="width:100%;">Dossier Technique (PDF)</a>
-            </div>
-        </div>
-
-        <div class="project-card reveal">
-            <div class="project-img-wrapper">
-                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600');"></div>
-            </div>
-            <div class="project-body">
-                <div>
-                    <h3 class="project-title">04 — Inventaire GLPI</h3>
-                    <div class="project-meta">
-                        <div class="meta-item"><span class="meta-label">Problématique</span><span class="meta-text">Absence de visibilité sur l'existant matériel et logiciel.</span></div>
-                        <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Installation de GLPI et déploiement massif d'agents d'inventaire.</span></div>
-                        <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Remontée automatique des fiches dans la base de données.</span></div>
-                    </div>
-                </div>
-                <a href="LIEN_PDF_TP4" target="_blank" class="btn btn-outline" style="width:100%;">Dossier Technique (PDF)</a>
-            </div>
-        </div>
-
-        <div class="project-card reveal">
-            <div class="project-img-wrapper">
-                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&q=80&w=600');"></div>
-            </div>
-            <div class="project-body">
-                <div>
-                    <h3 class="project-title">05 — Helpdesk & LDAP</h3>
-                    <div class="project-meta">
-                        <div class="meta-item"><span class="meta-label">Problématique</span><span class="meta-text">Centraliser le support et utiliser l'annuaire existant.</span></div>
-                        <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Liaison LDAP avec l'AD et mise en place du cycle des tickets.</span></div>
-                        <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Authentification réussie et création de tickets de test.</span></div>
-                    </div>
-                </div>
-                <a href="LIEN_PDF_TP5" target="_blank" class="btn btn-outline" style="width:100%;">Dossier Technique (PDF)</a>
-            </div>
-        </div>
-
-        <div class="project-card reveal">
-            <div class="project-img-wrapper">
-                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&q=80&w=600');"></div>
-            </div>
-            <div class="project-body">
-                <div>
-                    <h3 class="project-title">06 — Conformité Logicielle</h3>
-                    <div class="project-meta">
-                        <div class="meta-item"><span class="meta-label">Problématique</span><span class="meta-text">Assurer la traçabilité des licences et des interventions.</span></div>
-                        <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Gestion des contrats et modules "Changements" pour les interventions.</span></div>
-                        <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Rapports de conformité conformes aux licences achetées.</span></div>
-                    </div>
-                </div>
-                <a href="LIEN_PDF_TP6" target="_blank" class="btn btn-outline" style="width:100%;">Dossier Technique (PDF)</a>
+            <div style="display: flex; gap: 10px;">
+                <a href="https://drive.google.com/file/d/1k-2Cy609yber4dUqeBXmvUhP-esgUd7K/view?usp=sharing" target="_blank" class="btn btn-outline btn-small" style="width:100%;">Tech Doc</a>
             </div>
         </div>
     </div>
-</section>
+
+    <div class="project-card reveal">
+        <div class="project-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2000&auto=format&fit=crop" alt="AD Server" class="project-img">
+        </div>
+        <div class="project-body">
+            <div>
+                <h3 class="project-title">02 — Création Serveur AD</h3>
+                <div class="project-meta">
+                    <div class="meta-item"><span class="meta-label">Missions</span><span class="meta-text">Promouvoir un serveur en tant que Contrôleur de Domaine.</span></div>
+                    <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Installation du rôle AD DS et configuration de la forêt.</span></div>
+                    <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Opérabilité de l'annuaire et du catalogue global.</span></div>
+                </div>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <a href="https://drive.google.com/file/d/10atlPqtRkd-rgR0LwXfZdce58Dtr3Vo9/view?usp=sharing" target="_blank" class="btn btn-outline btn-small" style="width:100%;">Tech Doc</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-card reveal">
+        <div class="project-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2000&auto=format&fit=crop" alt="DHCP Windows" class="project-img">
+        </div>
+        <div class="project-body">
+            <div>
+                <h3 class="project-title">03 — Déployer DHCP Windows</h3>
+                <div class="project-meta">
+                    <div class="meta-item"><span class="meta-label">Missions</span><span class="meta-text">Gérer l'adressage dynamique du parc informatique.</span></div>
+                    <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Configuration d'étendues, exclusions et options de routeur.</span></div>
+                    <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Bail IP distribué avec succès aux clients du domaine.</span></div>
+                </div>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <a href="https://drive.google.com/file/d/1MMXq2OqgyGoXbE0bjFCPD6v2MlMBMg39/view?usp=sharing" target="_blank" class="btn btn-outline btn-small" style="width:100%;">Tech Doc</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-card reveal">
+        <div class="project-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=2000&auto=format&fit=crop" alt="Debian Linux" class="project-img">
+        </div>
+        <div class="project-body">
+            <div>
+                <h3 class="project-title">04 — Installation GLPI Debian</h3>
+                <div class="project-meta">
+                    <div class="meta-item"><span class="meta-label">Missions</span><span class="meta-text">Mise en place d'une solution de gestion de parc et helpdesk.</span></div>
+                    <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Installation stack LAMP (Linux Apache MariaDB PHP) sur Debian.</span></div>
+                    <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Accès à l'interface web et inventaire fonctionnel.</span></div>
+                </div>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <a href="https://drive.google.com/file/d/1DzMgq09lJcb2S06LGrDkHhmRIFIKvF3f/view?usp=sharing" target="_blank" class="btn btn-outline btn-small" style="width:100%;">Tech Doc</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-card reveal">
+        <div class="project-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1551708501-13202ca7a5d4?q=80&w=2000&auto=format&fit=crop" alt="VLAN Routing" class="project-img">
+        </div>
+        <div class="project-body">
+            <div>
+                <h3 class="project-title">05 — Routage Intervlan</h3>
+                <div class="project-meta">
+                    <div class="meta-item"><span class="meta-label">Missions</span><span class="meta-text">Segmenter le réseau et permettre la communication sécurisée.</span></div>
+                    <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Encapsulation 802.1Q et configuration de switchs administrables.</span></div>
+                    <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Tests d'isolation et de routage entre VLANs validés.</span></div>
+                </div>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <a href="https://drive.google.com/file/d/1oCTBZqMnRp5vJcMb8s6y8kPCZlIKHhSA/view?usp=sharing" target="_blank" class="btn btn-outline btn-small" style="width:100%;">Tech Doc</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-card reveal" style="border: 2px dashed var(--glass-border); opacity: 0.6;">
+        <div class="project-img-wrapper" style="background: rgba(255,255,255,0.02); height: 200px; display: flex; align-items: center; justify-content: center;">
+            <span style="font-size: 3rem; color: var(--text-muted);">+</span>
+        </div>
+        <div class="project-body" style="text-align: center; justify-content: center;">
+            <h3 class="project-title" style="color: var(--text-muted);">06 — Projet Futur</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Configuration en cours de préparation...</p>
+        </div>
+    </div>
+</div>
 
 <section id="cv" class="reveal">
     <div class="section-header">
@@ -552,7 +574,78 @@
         <iframe src="https://drive.google.com/file/d/1Go0hlsiEqtjYlXxrZxh-I-DMhLApBMbo/preview"></iframe>
     </div>
 </section>
+<section id="veille" class="reveal">
+    <div class="section-header">
+        <span class="tagline">Prospective & Innovation</span>
+        <h2>Veille Technologique : L'IA & La Défense</h2>
+        <p style="color: var(--text-muted); margin-top: 1rem; max-width: 800px;">
+            Analyse de l'intégration de l'intelligence artificielle dans les systèmes de combat et la cybersécurité des infrastructures critiques.
+        </p>
+    </div>
 
+    <div class="grid-2">
+        <div class="glass-box">
+            <h3 style="color: var(--accent-cyan); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 10px;">
+                🛡️ Enjeux Stratégiques & Cyber
+            </h3>
+            <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+                <div>
+                    <h4 style="color: white; font-size: 1rem; margin-bottom: 5px;">Accélération du cycle OODA</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">L'IA permet de traiter des téraoctets de données en temps réel pour réduire le délai entre l'Observation et l'Action (cycle OODA), un avantage décisif sur le terrain.</p>
+                </div>
+                <div>
+                    <h4 style="color: white; font-size: 1rem; margin-bottom: 5px;">Cyberdéfense prédictive</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Utilisation du Machine Learning pour identifier des signaux faibles d'intrusion (APT) et automatiser la réponse aux incidents sur les réseaux militaires.</p>
+                </div>
+                <div>
+                    <h4 style="color: white; font-size: 1rem; margin-bottom: 5px;">Souveraineté des modèles</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Garantir l'autonomie stratégique française en développant des IA souveraines, non dépendantes de solutions étrangères pour la prise de décision sensible.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-box">
+            <h3 style="color: var(--accent-purple); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 10px;">
+                📡 Flux d'actualités (Direct 2026)
+            </h3>
+            <div style="max-height: 350px; overflow-y: auto; padding-right: 10px;">
+                <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 12px; margin-bottom: 15px; border-left: 3px solid var(--accent-purple);">
+                    <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">20 AVRIL 2026</span>
+                    <h4 style="font-size: 0.95rem; color: white; margin: 5px 0;">NATO : Déploiement de l'IA pour la sécurisation des liaisons satellites.</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Mise en place d'algorithmes de détection de brouillage intelligent sur les bandes KA/KU.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 12px; margin-bottom: 15px; border-left: 3px solid var(--accent-purple);">
+                    <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">15 MARS 2026</span>
+                    <h4 style="font-size: 0.95rem; color: white; margin: 5px 0;">Ministère des Armées : Rapport sur la maintenance prédictive SCORPION.</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">L'IA réduit de 30% l'indisponibilité technique des blindés de nouvelle génération.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 12px; border-left: 3px solid var(--accent-purple);">
+                    <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">02 FÉVRIER 2026</span>
+                    <h4 style="font-size: 0.95rem; color: white; margin: 5px 0;">ANSSI : Publication du guide "IA & Sécurité des Systèmes Industriels".</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Nouvelles recommandations pour protéger les infrastructures critiques contre les cyber-attaques dopées à l'IA.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 style="margin: 3rem 0 1.5rem; text-align: left; font-size: 1.3rem;">Sources Officielles Vérifiées</h3>
+    <div class="project-grid">
+        <a href="https://www.defense.gouv.fr/aid/nos-expertises/intelligence-artificielle" target="_blank" class="glass-box source-card" style="text-decoration: none;">
+            <h4 style="color: white; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">L'IA de Défense (AID) <span style="font-size: 1.2rem;">↗</span></h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Stratégie et projets de l'Agence de l'Innovation de Défense.</p>
+        </a>
+
+        <a href="https://www.defense.gouv.fr/nos-enjeux/intelligence-artificielle" target="_blank" class="glass-box source-card" style="text-decoration: none;">
+            <h4 style="color: white; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">Enjeux de Souveraineté <span style="font-size: 1.2rem;">↗</span></h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Comprendre la position française sur l'IA et l'autonomie stratégique.</p>
+        </a>
+
+        <a href="https://www.cyber.gouv.fr/" target="_blank" class="glass-box source-card" style="text-decoration: none;">
+            <h4 style="color: white; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">ANSSI <span style="font-size: 1.2rem;">↗</span></h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Actualité de la menace cyber et guides de sécurisation nationaux.</p>
+        </a>
+    </div>
+</section>
 <section id="contact" class="reveal">
     <div class="contact-layout">
         <div>
