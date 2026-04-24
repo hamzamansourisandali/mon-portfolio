@@ -238,6 +238,21 @@
             border-color: var(--accent-cyan);
             background: rgba(255, 255, 255, 0.06);
         }
+.hero-header-flex {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-blue);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
     </style>
 </head>
 <body>
@@ -261,9 +276,18 @@
 <section id="hero">
     <div class="hero-content">
         <div class="badge-status">
-            <div class="pulse"></div> Disponible : CDD / CDI (Technicien Helpdesk N1, N2, Support IT ou similaire)
+            <div class="pulse"></div> 
+            <span>Disponible : CDD / CDI (Technicien Helpdesk N1, N2, Support IT)</span>
         </div>
-        <h1>Mansouri Sandali <br><span>Hamza</span></h1>
+        
+        <div class="hero-header-flex">
+            <img src="photo_ia.jpeg" alt="Hamza Mansouri Sandali" class="profile-pic">
+            
+            <div class="name-text">
+                <h1>Mansouri Sandali <br><span>Hamza</span></h1>
+            </div>
+        </div>
+
         <p class="hero-title-sub">Technicien Systèmes & Réseaux</p>
         <p style="font-size: 1.15rem; color: var(--text-muted); max-width: 600px; margin-bottom: 3rem;">
             Passionné par les environnements réseaux et systèmes, je conçois, déploie et maintiens des infrastructures au service de projets techniques exigeants.
@@ -458,41 +482,22 @@
         <h2>Réalisations Techniques</h2>
     </div>
 
-    <div class="project-grid">
+<div class="project-grid">
     <div class="project-card reveal">
         <div class="project-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc48?q=80&w=2000&auto=format&fit=crop" alt="Virtualisation" class="project-img">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop" alt="Active Directory" class="project-img">
         </div>
         <div class="project-body">
             <div>
-                <h3 class="project-title">01 — Création d'une VM Windows</h3>
+                <h3 class="project-title">01 — Active Directory & DNS</h3>
                 <div class="project-meta">
-                    <div class="meta-item"><span class="meta-label">Missions</span><span class="meta-text">Installer et configurer un environnement virtuel Windows.</span></div>
-                    <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Allocation des ressources (RAM, CPU), partitionnement et installation de l'OS.</span></div>
-                    <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Optimisation des performances et installation des outils invités.</span></div>
+                    <div class="meta-item"><span class="meta-label">Missions</span><span class="meta-text">Conception réseau, configuration AD et intégration de machines clientes.</span></div>
+                    <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Mise en place de la sécurité des mots de passe et déploiement de GPO.</span></div>
+                    <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Tests de connexion utilisateur et application des stratégies de groupe.</span></div>
                 </div>
             </div>
             <div style="display: flex; gap: 10px;">
-                <a href="https://drive.google.com/file/d/1k-2Cy609yber4dUqeBXmvUhP-esgUd7K/view?usp=sharing" target="_blank" class="btn btn-outline btn-small" style="width:100%;">Tech Doc</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-card reveal">
-        <div class="project-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2000&auto=format&fit=crop" alt="AD Server" class="project-img">
-        </div>
-        <div class="project-body">
-            <div>
-                <h3 class="project-title">02 — Création Serveur AD</h3>
-                <div class="project-meta">
-                    <div class="meta-item"><span class="meta-label">Missions</span><span class="meta-text">Promouvoir un serveur en tant que Contrôleur de Domaine.</span></div>
-                    <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Installation du rôle AD DS et configuration de la forêt.</span></div>
-                    <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Opérabilité de l'annuaire et du catalogue global.</span></div>
-                </div>
-            </div>
-            <div style="display: flex; gap: 10px;">
-                <a href="https://drive.google.com/file/d/10atlPqtRkd-rgR0LwXfZdce58Dtr3Vo9/view?usp=sharing" target="_blank" class="btn btn-outline btn-small" style="width:100%;">Tech Doc</a>
+                <a href="lien_AD_DNS" target="_blank" class="btn btn-outline btn-small" style="width:100%;">Tech Doc</a>
             </div>
         </div>
     </div>
@@ -503,66 +508,95 @@
         </div>
         <div class="project-body">
             <div>
-                <h3 class="project-title">03 — Déployer DHCP Windows</h3>
+                <h3 class="project-title">02 — Déploiement DHCP Windows</h3>
                 <div class="project-meta">
-                    <div class="meta-item"><span class="meta-label">Missions</span><span class="meta-text">Gérer l'adressage dynamique du parc informatique.</span></div>
-                    <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Configuration d'étendues, exclusions et options de routeur.</span></div>
-                    <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Bail IP distribué avec succès aux clients du domaine.</span></div>
+                    <div class="meta-item"><span class="meta-label">Missions</span><span class="meta-text">Automatiser l'adressage IPv4 et la gestion des baux réseau.</span></div>
+                    <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Création d'étendues, plages d'exclusion et réservations IP.</span></div>
+                    <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Renouvellement manuel du bail et tests de connectivité globale.</span></div>
                 </div>
             </div>
             <div style="display: flex; gap: 10px;">
-                <a href="https://drive.google.com/file/d/1MMXq2OqgyGoXbE0bjFCPD6v2MlMBMg39/view?usp=sharing" target="_blank" class="btn btn-outline btn-small" style="width:100%;">Tech Doc</a>
+                <a href="lien_DHCP_Windows" target="_blank" class="btn btn-outline btn-small" style="width:100%;">Tech Doc</a>
             </div>
         </div>
     </div>
 
     <div class="project-card reveal">
         <div class="project-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=2000&auto=format&fit=crop" alt="Debian Linux" class="project-img">
+            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2000&auto=format&fit=crop" alt="File Server" class="project-img">
         </div>
         <div class="project-body">
             <div>
-                <h3 class="project-title">04 — Installation GLPI Debian</h3>
+                <h3 class="project-title">03 — Gestion des Accès & Droits</h3>
                 <div class="project-meta">
-                    <div class="meta-item"><span class="meta-label">Missions</span><span class="meta-text">Mise en place d'une solution de gestion de parc et helpdesk.</span></div>
-                    <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Installation stack LAMP (Linux Apache MariaDB PHP) sur Debian.</span></div>
-                    <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Accès à l'interface web et inventaire fonctionnel.</span></div>
+                    <div class="meta-item"><span class="meta-label">Missions</span><span class="meta-text">Mise en place d'un serveur de fichiers et gestion des permissions.</span></div>
+                    <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Création d'utilisateurs locaux et montage de lecteurs réseau.</span></div>
+                    <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Tests d'accès croisés pour les services Enedis et MSA.</span></div>
                 </div>
             </div>
             <div style="display: flex; gap: 10px;">
-                <a href="https://drive.google.com/file/d/1DzMgq09lJcb2S06LGrDkHhmRIFIKvF3f/view?usp=sharing" target="_blank" class="btn btn-outline btn-small" style="width:100%;">Tech Doc</a>
+                <a href="lien_Gestion_Droits" target="_blank" class="btn btn-outline btn-small" style="width:100%;">Tech Doc</a>
             </div>
         </div>
     </div>
 
     <div class="project-card reveal">
         <div class="project-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1551708501-13202ca7a5d4?q=80&w=2000&auto=format&fit=crop" alt="VLAN Routing" class="project-img">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop" alt="GLPI Helpdesk" class="project-img">
         </div>
         <div class="project-body">
             <div>
-                <h3 class="project-title">05 — Routage Intervlan</h3>
+                <h3 class="project-title">04 — GLPI : LAMP & Rôles</h3>
                 <div class="project-meta">
-                    <div class="meta-item"><span class="meta-label">Missions</span><span class="meta-text">Segmenter le réseau et permettre la communication sécurisée.</span></div>
-                    <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Encapsulation 802.1Q et configuration de switchs administrables.</span></div>
-                    <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Tests d'isolation et de routage entre VLANs validés.</span></div>
+                    <div class="meta-item"><span class="meta-label">Missions</span><span class="meta-text">Installation d'une solution Helpdesk sur pile LAMP (MariaDB/PHP).</span></div>
+                    <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Configuration d'Apache2 et étude approfondie des rôles GLPI.</span></div>
+                    <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Interface opérationnelle et base de données synchronisée.</span></div>
                 </div>
             </div>
             <div style="display: flex; gap: 10px;">
-                <a href="https://drive.google.com/file/d/1oCTBZqMnRp5vJcMb8s6y8kPCZlIKHhSA/view?usp=sharing" target="_blank" class="btn btn-outline btn-small" style="width:100%;">Tech Doc</a>
+                <a href="lien_GLPI_LAMP" target="_blank" class="btn btn-outline btn-small" style="width:100%;">Tech Doc</a>
             </div>
         </div>
     </div>
 
-    <div class="project-card reveal" style="border: 2px dashed var(--glass-border); opacity: 0.6;">
-        <div class="project-img-wrapper" style="background: rgba(255,255,255,0.02); height: 200px; display: flex; align-items: center; justify-content: center;">
-            <span style="font-size: 3rem; color: var(--text-muted);">+</span>
+    <div class="project-card reveal">
+        <div class="project-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop" alt="GLPI LDAP" class="project-img">
         </div>
-        <div class="project-body" style="text-align: center; justify-content: center;">
-            <h3 class="project-title" style="color: var(--text-muted);">06 — Projet Futur</h3>
-            <p style="font-size: 0.85rem; color: var(--text-muted);">Configuration en cours de préparation...</p>
+        <div class="project-body">
+            <div>
+                <h3 class="project-title">05 — GLPI : LDAP & Agents</h3>
+                <div class="project-meta">
+                    <div class="meta-item"><span class="meta-label">Missions</span><span class="meta-text">Centralisation de l'annuaire et inventaire automatique du parc.</span></div>
+                    <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Liaison LDAP avec Active Directory et déploiement d'agents GLPI.</span></div>
+                    <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Remontée automatique des assets et authentification centralisée.</span></div>
+                </div>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <a href="lien_GLPI_LDAP" target="_blank" class="btn btn-outline btn-small" style="width:100%;">Tech Doc</a>
+            </div>
         </div>
     </div>
+
+    <div class="project-card reveal">
+        <div class="project-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2000&auto=format&fit=crop" alt="Networking Switch" class="project-img">
+        </div>
+        <div class="project-body">
+            <div>
+                <h3 class="project-title">06 — Routage Inter-VLAN</h3>
+                <div class="project-meta">
+                    <div class="meta-item"><span class="meta-label">Missions</span><span class="meta-text">Segmentation réseau via VTP et routage via interfaces SVI.</span></div>
+                    <div class="meta-item"><span class="meta-label">Réalisation</span><span class="meta-text">Configuration de trunks 802.1Q et mise en place d'ACL de filtrage.</span></div>
+                    <div class="meta-item"><span class="meta-label">Validation</span><span class="meta-text">Pings inter-zones autorisés et filtrage des zones interdites.</span></div>
+                </div>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <a href="lien_Routage_VLAN" target="_blank" class="btn btn-outline btn-small" style="width:100%;">Tech Doc</a>            </div>
+        </div>
+    </div>
+</div>
+            
 </div>
 
 <section id="cv" class="reveal">
